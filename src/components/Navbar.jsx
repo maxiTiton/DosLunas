@@ -35,7 +35,7 @@ const Navbar = () => {
             }`}
           >
             <img 
-              src="/src/assets/images/logo.png" 
+              src="/images/logo.png" 
               alt="Dos Lunas" 
               className="h-14 w-auto mr-3 transition-all duration-300"
               style={{
