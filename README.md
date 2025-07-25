@@ -1,15 +1,12 @@
-# DosLunas
+# React + Vite
 
-# 🌲 Rediseño Web - Complejo de Cabañas
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Rediseño moderno y responsivo del sitio web de un complejo de cabañas, desarrollado con **React**, **Tailwind CSS** y **Vite**. Este proyecto tiene como objetivo renovar la interfaz visual, optimizar la experiencia del usuario en dispositivos móviles y facilitar futuras actualizaciones del sitio.
+Currently, two official plugins are available:
 
-## 🚀 Tecnologías utilizadas
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-- [React](https://reactjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Vite](https://vitejs.dev/)
-- [Vercel](https://vercel.com/) (para el despliegue)
+## Expanding the ESLint configuration
 
-
-
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

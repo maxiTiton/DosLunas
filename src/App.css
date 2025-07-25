@@ -1,0 +1,9 @@
+/* Estilos adicionales si son necesarios */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Para mejorar la navegación suave entre secciones */
+section {
+  scroll-margin-top: 80px;
+}
