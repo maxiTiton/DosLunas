@@ -99,7 +99,7 @@ const Cabanas = () => {
   return (
     <section id="cabanas" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className={`text-center ${selectedCabana ? 'mb-16' : 'mb-8'}`}>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-6">
             Nuestras Cabañas
           </h2>

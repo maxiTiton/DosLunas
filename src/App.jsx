@@ -5,6 +5,7 @@ import Nosotros from './components/Nosotros'
 import Cabanas from './components/Cabanas'
 import Contacto from './components/Contacto'
 import Ubicacion from './components/Ubicacion'
+import Footer from './components/Footer'
 import './App.css'
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Cabanas />
       <Contacto />
       <Ubicacion />
+      <Footer />
     </div>
   )
 }

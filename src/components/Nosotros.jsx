@@ -29,7 +29,7 @@ const Nosotros = () => {
             <div className="relative z-10">
               <div className="space-y-5 text-gray-700 text-justify leading-relaxed">
                 <p className="text-base leading-7">
-                  <em>Dos Lunas</em> es un complejo de cabañas totalmente equipadas, ubicado en lo alto de una colina serrana, en plena naturaleza de Alpa Corral.
+                  <em>Dos Lunas</em> es un complejo de cabañas totalmente equipadas, ubicado en una colina serrana, en plena naturaleza de Alpa Corral.
                 </p>
                 
                 <p className="text-base leading-7">
@@ -37,11 +37,11 @@ const Nosotros = () => {
                 </p>
                 
                 <p className="text-base leading-7">
-                  El predio cuenta con un parque arbolado con juegos infantiles —hamacas, tobogán y espacio verde para disfrutar en familia—, a solo pasos del cauce.
+                  El predio ofrece un parque arbolado con juegos infantiles, como hamacas y tobogán, y una amplia zona verde ideal para disfrutar en familia o con amigos.
                 </p>
                 
                 <p className="text-base leading-7">
-                  Como sugiere el nombre, la <em>luna</em> también forma parte del lugar: rige los ciclos de la naturaleza, ilumina las noches claras y acompaña el descanso de quienes nos visitan.
+                  Como sugiere el nombre, la <em>luna</em> también forma parte del lugar: rige los ciclos de la naturaleza, ilumina las noches y acompaña el descanso de quienes nos visitan.
                 </p>
               </div>
             </div>
