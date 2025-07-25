@@ -1,13 +1,12 @@
 import React from 'react'
 
 const Nosotros = () => {
-  // Aquí pondrás las 4 imágenes generales que mencionaste
+  // Rutas corregidas para acceder a imágenes dentro de /public/images
   const imagenes = [
-    '/src/assets/images/luna1/principal.jpg',
-    '/src/assets/images/nosotros-1.jpg',
-    '/src/assets/images/alpaCorral.avif',
-    '/src/assets/images/nosotros-3.jpg',
-    
+    '/images/luna1/principal.jpg',
+    '/images/nosotros-1.jpg',
+    '/images/alpaCorral.avif',
+    '/images/nosotros-3.jpg',
   ]
 
   return (
@@ -24,22 +23,19 @@ const Nosotros = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-1 items-center">
-          {/* Texto justificado en formato hoja */}
-          <div className="bg-white px-10 py-8 rounded-3xl shadow-lg border border-gray-100 relative w-full max-w-xl" style={{marginLeft: '4rem'}}>
+          {/* Texto */}
+          <div className="bg-white px-10 py-8 rounded-3xl shadow-lg border border-gray-100 relative w-full max-w-xl" style={{ marginLeft: '4rem' }}>
             <div className="relative z-10">
               <div className="space-y-5 text-gray-700 text-justify leading-relaxed">
                 <p className="text-base leading-7">
                   <em>Dos Lunas</em> es un complejo de cabañas totalmente equipadas, ubicado en una colina serrana, en plena naturaleza de Alpa Corral.
                 </p>
-                
                 <p className="text-base leading-7">
                   A pocos metros del centro del pueblo, el complejo ofrece tranquilidad sin perder conexión con lo esencial. Al pie de la colina, un breve descenso conduce directamente al río, donde el sonido del agua y la vegetación completan la experiencia.
                 </p>
-                
                 <p className="text-base leading-7">
                   El predio ofrece un parque arbolado con juegos infantiles, como hamacas y tobogán, y una amplia zona verde ideal para disfrutar en familia o con amigos.
                 </p>
-                
                 <p className="text-base leading-7">
                   Como sugiere el nombre, la <em>luna</em> también forma parte del lugar: rige los ciclos de la naturaleza, ilumina las noches y acompaña el descanso de quienes nos visitan.
                 </p>
@@ -47,13 +43,13 @@ const Nosotros = () => {
             </div>
           </div>
 
-          {/* Grid de imágenes mejorado */}
+          {/* Grid de imágenes */}
           <div className="grid grid-cols-2 gap-3 max-w-lg mx-auto">
             {imagenes.map((imagen, index) => (
-              <div 
+              <div
                 key={index}
                 className="w-52 h-52 rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-shadow duration-300"
-                style={{boxShadow: '0 15px 20px -5px rgba(0, 0, 0, 0.2), 0 8px 8px -5px rgba(0, 0, 0, 0.15)'}}
+                style={{ boxShadow: '0 15px 20px -5px rgba(0, 0, 0, 0.2), 0 8px 8px -5px rgba(0, 0, 0, 0.15)' }}
               >
                 <img
                   src={imagen}
@@ -68,7 +64,7 @@ const Nosotros = () => {
           </div>
         </div>
 
-        {/* Tarjetas de características */}
+        {/* Tarjetas */}
         <div className="mt-16 flex justify-center">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl">
             <div className="bg-white p-6 rounded-3xl shadow-lg text-center w-60">
@@ -110,3 +106,4 @@ const Nosotros = () => {
 }
 
 export default Nosotros
+

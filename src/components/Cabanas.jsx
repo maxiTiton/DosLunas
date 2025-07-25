@@ -6,51 +6,52 @@ const Cabanas = () => {
   const [selectedImage, setSelectedImage] = useState(0)
 
   const cabanas = [
-    {
-      id: 'luna1',
-      nombre: 'Luna I',
-      descripcion: 'Cabaña completa con capacidad ampliada, ideal para familias numerosas o grupos de amigos.',
-      capacidad: '7 personas',
-      habitaciones: '1 dormitorio',
-      bano: '1 baño completo',
-      cocina: 'Cocina equipada',
-      extras: ['WiFi', 'Cofres de seguridad', 'Parrilla con juego de jardín', 'Hogar a leñas en living', 'Cocina Equipada', 'Galería-cochera individual', 'Calefactores en cada ambiente', 'Ropa blanca', 'DirectTV', 'Juegos infantiles'],
-      imagen_principal: '/src/assets/images/luna1/principal.jpg',
-      galeria: [
-        '/src/assets/images/luna1/cabana1-dormi-matrimonial.jpg',
-        '/src/assets/images/luna1/cabana1-dormi-multiple.jpg',
-        '/src/assets/images/luna1/cabana1-comedor.jpg',
-        '/src/assets/images/luna1/cabana1-comedor-cocina.jpg',
-        '/src/assets/images/luna1/cabana1-cocina.jpg',
-        '/src/assets/images/luna1/cabana1-banio.jpg',
-        '/src/assets/images/luna1/cabana1-asador.jpg',
-        '/src/assets/images/luna1/cabana1-escalera.jpg',
-        '/src/assets/images/luna1/cabana1-garage.jpg',
-      ]
-    },
-    {
-      id: 'luna2',
-      nombre: 'Luna II',
-      descripcion: 'Perfecta para familias o grupos medianos que buscan comodidad y tranquilidad.',
-      capacidad: '6 personas',
-      habitaciones: '2 dormitorios',
-      bano: '2 baños completos',
-      cocina: 'Cocina completa con comedor',
-      extras: ['WiFi', 'Cofres de seguridad', 'Parrilla con juego de jardín', 'Hogar a leñas en living', 'Cocina Equipada', 'Galería-cochera individual', 'Calefactores en cada ambiente', 'Ropa blanca', 'DirectTV', 'Juegos infantiles'],
-      imagen_principal: '/src/assets/images/luna2/principal.jpg',
-      galeria: [
-        '/src/assets/images/luna2/cabana2-domi-matrimonial.jpg',
-        '/src/assets/images/luna2/cabana2-dormi-multiple.jpg',
-        '/src/assets/images/luna2/cabana2-dormi-multiple2.jpg',
-        '/src/assets/images/luna2/cabana2-comedor.jpg',
-        '/src/assets/images/luna2/cabana2-banio.jpg',
-        '/src/assets/images/luna2/cabana2-asador.jpg',
-        '/src/assets/images/luna2/cabana2-escalera.jpg',
-        '/src/assets/images/luna2/cabana2-escalera2.jpg',
-        '/src/assets/images/luna2/cabana2-lavadero.jpg',
-      ]
-    }
-  ]
+  {
+    id: 'luna1',
+    nombre: 'Luna I',
+    descripcion: 'Cabaña completa con capacidad ampliada, ideal para familias numerosas o grupos de amigos.',
+    capacidad: '7 personas',
+    habitaciones: '1 dormitorio',
+    bano: '1 baño completo',
+    cocina: 'Cocina equipada',
+    extras: ['WiFi', 'Cofres de seguridad', 'Parrilla con juego de jardín', 'Hogar a leñas en living', 'Cocina Equipada', 'Galería-cochera individual', 'Calefactores en cada ambiente', 'Ropa blanca', 'DirectTV', 'Juegos infantiles'],
+    imagen_principal: '/images/luna1/principal.jpg',
+    galeria: [
+      '/images/luna1/cabana1-dormi-matrimonial.jpg',
+      '/images/luna1/cabana1-dormi-multiple.jpg',
+      '/images/luna1/cabana1-comedor.jpg',
+      '/images/luna1/cabana1-comedor-cocina.jpg',
+      '/images/luna1/cabana1-cocina.jpg',
+      '/images/luna1/cabana1-banio.jpg',
+      '/images/luna1/cabana1-asador.jpg',
+      '/images/luna1/cabana1-escalera.jpg',
+      '/images/luna1/cabana1-garage.jpg',
+    ]
+  },
+  {
+    id: 'luna2',
+    nombre: 'Luna II',
+    descripcion: 'Perfecta para familias o grupos medianos que buscan comodidad y tranquilidad.',
+    capacidad: '6 personas',
+    habitaciones: '2 dormitorios',
+    bano: '2 baños completos',
+    cocina: 'Cocina completa con comedor',
+    extras: ['WiFi', 'Cofres de seguridad', 'Parrilla con juego de jardín', 'Hogar a leñas en living', 'Cocina Equipada', 'Galería-cochera individual', 'Calefactores en cada ambiente', 'Ropa blanca', 'DirectTV', 'Juegos infantiles'],
+    imagen_principal: '/images/luna2/principal.jpg',
+    galeria: [
+      '/images/luna2/cabana2-domi-matrimonial.jpg',
+      '/images/luna2/cabana2-dormi-multiple.jpg',
+      '/images/luna2/cabana2-dormi-multiple2.jpg',
+      '/images/luna2/cabana2-comedor.jpg',
+      '/images/luna2/cabana2-banio.jpg',
+      '/images/luna2/cabana2-asador.jpg',
+      '/images/luna2/cabana2-escalera.jpg',
+      '/images/luna2/cabana2-escalera2.jpg',
+      '/images/luna2/cabana2-lavadero.jpg',
+    ]
+  }
+  ];
+
 
   const selectCabana = (cabana) => {
     setSelectedCabana(cabana)

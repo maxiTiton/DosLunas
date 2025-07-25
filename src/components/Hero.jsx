@@ -3,17 +3,17 @@ import React from 'react'
 const Hero = () => {
   return (
     <section className="relative h-screen flex items-center justify-center">
-      {/* Background Image - aquí colocarás la imagen del cartel con la cabaña */}
+      {/* Imagen de fondo del Hero */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/src/assets/images/hero-bg.jpg')",
+          backgroundImage: "url('/images/hero-bg.jpg')",
         }}
       >
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
 
-      {/* Hero Content */}
+      {/* Contenido del Hero */}
       <div className="relative z-10 text-center text-white px-4">
         <h1 className="text-5xl md:text-7xl font-display font-bold mb-6">
           Cabañas Dos Lunas
@@ -37,7 +37,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll down indicator */}
+      {/* Indicador de scroll hacia abajo */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
         <div className="animate-bounce">
           <i className="fas fa-chevron-down text-white text-2xl"></i>
@@ -48,3 +48,4 @@ const Hero = () => {
 }
 
 export default Hero
+
