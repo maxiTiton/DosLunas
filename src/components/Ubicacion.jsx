@@ -3,7 +3,7 @@ import React from 'react'
 const Ubicacion = () => {
   const handleMaps = () => {
     window.open(
-      'https://www.google.com/maps/place/32%C2%B041\'15.2%22S+64%C2%B043\'32.9%22W/@-32.6875514,-64.7267353,319m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d-32.687553!4d-64.725802?hl=en-US&entry=ttu',
+      'https://www.google.com/maps/place/Caba%C3%B1as+Dos+Lunas/@-32.6875408,-64.7267041,284m/data=!3m1!1e3!4m6!3m5!1s0x95d25d0050a25673:0xa27ca08813d74a94!8m2!3d-32.687563!4d-64.7258223!16s%2Fg%2F11xp0qgfxn?hl=es-419&entry=ttu',
       '_blank'
     )
   }
@@ -26,7 +26,7 @@ const Ubicacion = () => {
           <div className="relative mb-6">
             <div className="bg-gray-200 rounded-2xl overflow-hidden shadow-lg h-96">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d600.0533138631299!2d-64.725802!3d-32.687553!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDQxJzE1LjIiUyA2NMKwNDMnMzIuOSJX!5e1!3m2!1ses-419!2sar!4v1721899000000!5m2!1ses-419!2sar"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d940.0252551971785!2d-64.72670410000001!3d-32.6875408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d25d0050a25673%3A0xa27ca08813d74a94!2sCaba%C3%B1as%20Dos%20Lunas!5e1!3m2!1ses-419!2sar!4v1722000000000!5m2!1ses-419!2sar"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
