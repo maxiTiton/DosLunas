@@ -39,9 +39,9 @@ const Ubicacion = () => {
           </div>
 
           {/* Aclaración importante */}
-          <div className="mb-6 md:mb-8 text-center px-4">
+          <div className="mb-6 md:mb-8 text-justify px-4">
             <p className="text-gray-700 leading-relaxed text-sm md:text-base">
-              <span className="font-bold italic text-brick-600">Aclaración importante:</span> Google Maps muestra incorrectamente el nombre de la calle como "Los Aromos". La dirección correcta es "El Aguaribay". Sin embargo, las coordenadas son precisas y te llevarán al lugar exacto.
+              <span className="font-bold italic text-brick-600">Aclaración importante:</span> Google Maps muestra incorrectamente el nombre de la calle como "Los Aromos"; la dirección correcta es "El Aguaribay". Sin embargo, las coordenadas son precisas y te llevarán al lugar exacto.
             </p>
           </div>
 

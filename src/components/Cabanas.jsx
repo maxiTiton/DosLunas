@@ -9,7 +9,7 @@ const Cabanas = () => {
   {
     id: 'luna1',
     nombre: 'Luna I',
-    descripcion: 'Cabaña completa con capacidad ampliada, ideal para familias numerosas o grupos de amigos.',
+    descripcion: 'Cabaña completa con amplia capacidad, ideal para familias numerosas o grupos de amigos.',
     capacidad: '7 personas',
     habitaciones: '1 dormitorio',
     bano: '1 baño completo',

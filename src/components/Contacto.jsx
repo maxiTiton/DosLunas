@@ -5,8 +5,7 @@ const Contacto = () => {
   const email = "cab_doslunas@yahoo.com.ar" // Email proporcionado
 
   const handleWhatsApp = () => {
-    const message = encodeURIComponent("Hola! Me interesa hacer una reserva en Cabañas Dos Lunas. ¿Podrían brindarme más información?")
-    window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank')
+    window.open(`https://wa.me/${whatsappNumber}`, '_blank')
   }
 
   const handleEmail = () => {
