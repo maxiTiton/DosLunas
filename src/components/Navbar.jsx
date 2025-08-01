@@ -29,9 +29,12 @@ const Navbar = () => {
     setIsOpen(false)
   }
 
+  // Determinar si la navbar debe ser blanca (scrolled o menú abierto)
+  const shouldBeWhite = isScrolled || isOpen
+
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
+      shouldBeWhite 
         ? 'bg-white/95 backdrop-blur-md shadow-lg' 
         : 'bg-gradient-to-b from-black/50 via-black/30 to-black/10 backdrop-blur-[2px]'
     }`}>
@@ -41,7 +44,7 @@ const Navbar = () => {
           <a 
             href="#inicio"
             className={`flex items-center cursor-pointer transition-colors duration-300 ${
-              isScrolled ? 'text-gray-900' : 'text-white'
+              shouldBeWhite ? 'text-gray-900' : 'text-white'
             }`}
           >
             <img 
@@ -49,7 +52,7 @@ const Navbar = () => {
               alt="Dos Lunas" 
               className="h-14 w-auto mr-3 transition-all duration-300"
               style={{
-                filter: isScrolled ? 'invert(1) brightness(0)' : 'none'
+                filter: shouldBeWhite ? 'invert(1) brightness(0)' : 'none'
               }}
               onError={(e) => {
                 e.target.style.display = 'none';
@@ -63,7 +66,7 @@ const Navbar = () => {
 
           {/* Menu Desktop */}
           <div className={`hidden md:flex space-x-12 font-medium transition-colors duration-300 ${
-            isScrolled ? 'text-gray-700' : 'text-white'
+            shouldBeWhite ? 'text-gray-700' : 'text-white'
           }`}>
             <a href="#nosotros" className="relative py-2 transition-all duration-300 ease-out group hover:text-sage-600">
               <span className="relative z-10">Nosotros</span>
@@ -88,7 +91,7 @@ const Navbar = () => {
             <a 
               href="#contacto" 
               className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 ease-out hover:scale-110 hover:shadow-lg ${
-                isScrolled
+                shouldBeWhite
                   ? 'bg-brick-600 hover:bg-brick-800 text-white shadow-md hover:shadow-xl transform hover:-translate-y-0.5' 
                   : 'bg-white/20 backdrop-blur-sm hover:bg-white hover:text-gray-800 text-white border border-white/30 hover:border-white hover:backdrop-blur-md hover:drop-shadow-lg'
               }`}
@@ -104,7 +107,7 @@ const Navbar = () => {
             aria-label="Toggle menu"
           >
             <svg
-              className="w-7 h-7 text-white"
+              className={`w-7 h-7 transition-colors duration-300 ${shouldBeWhite ? 'text-gray-900' : 'text-white'}`}
               fill="none"
               stroke="currentColor"
               strokeWidth="2"

@@ -15,22 +15,22 @@ const Hero = () => {
 
       {/* Contenido del Hero */}
       <div className="relative z-10 text-center text-white px-6 sm:px-8 md:px-0 max-w-4xl mx-auto">
-        <h1 className="text-3xl sm:text-4xl md:text-7xl font-display font-bold mb-6 leading-tight">
+        <h1 className="text-5xl sm:text-6xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight">
           Cabañas Dos Lunas
         </h1>
         <p className="text-base sm:text-lg md:text-2xl mb-8 max-w-xl mx-auto">
           Donde la naturaleza y el descanso se encuentran
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a 
             href="#cabanas" 
-            className="bg-brick-600 hover:bg-brick-800 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            className="bg-brick-600 hover:bg-brick-800 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl w-40 sm:w-auto text-center"
           >
             Ver Cabañas
           </a>
           <a 
             href="#contacto" 
-            className="bg-sage-600 hover:bg-sage-800 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            className="bg-sage-600 hover:bg-sage-800 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl w-40 sm:w-auto text-center"
           >
             Contactar
           </a>
