@@ -1,6 +1,10 @@
 import React from 'react'
+import useScrollAnimation from '../hooks/useScrollAnimation'
 
 const Contacto = () => {
+  const [titleRef, isTitleVisible] = useScrollAnimation(0.1)
+  const [buttonsRef, isButtonsVisible] = useScrollAnimation(0.1)
+  
   const whatsappNumber = "5493586000002" // Número proporcionado
   const email = "cab_doslunas@yahoo.com.ar" // Email proporcionado
 
@@ -16,7 +20,7 @@ const Contacto = () => {
   return (
     <section id="contacto" className="py-12 md:py-20 bg-gray-50">
       <div className="max-w-4xl mx-auto px-4">
-        <div className="text-center mb-12 md:mb-16">
+        <div ref={titleRef} className={`text-center mb-12 md:mb-16 fade-up ${isTitleVisible ? 'visible' : ''}`}>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-gray-900 mb-4 md:mb-6">
             Contacto
           </h2>
@@ -27,7 +31,7 @@ const Contacto = () => {
         </div>
 
         {/* Botones de contacto centrados */}
-        <div className="max-w-lg mx-auto space-y-4 md:space-y-6 px-4">
+        <div ref={buttonsRef} className={`max-w-lg mx-auto space-y-4 md:space-y-6 px-4 fade-up fade-up-delay-1 ${isButtonsVisible ? 'visible' : ''}`}>
           {/* WhatsApp */}
           <button
             onClick={handleWhatsApp}

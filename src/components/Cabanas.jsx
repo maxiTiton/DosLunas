@@ -1,9 +1,25 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import useScrollAnimation from '../hooks/useScrollAnimation'
 
 const Cabanas = () => {
   const [selectedCabana, setSelectedCabana] = useState(null)
   const [modalOpen, setModalOpen] = useState(false)
   const [selectedImage, setSelectedImage] = useState(0)
+  const [showDetails, setShowDetails] = useState(false)
+  const [titleRef, isTitleVisible] = useScrollAnimation(0.1)
+  const [selectorRef, isSelectorVisible] = useScrollAnimation(0.1)
+
+  // Efecto para mostrar detalles con animación cuando se selecciona una cabaña
+  useEffect(() => {
+    if (selectedCabana) {
+      // Pequeño delay para que se monte el DOM primero
+      setTimeout(() => {
+        setShowDetails(true)
+      }, 50)
+    } else {
+      setShowDetails(false)
+    }
+  }, [selectedCabana])
 
   const cabanas = [
   {
@@ -55,6 +71,8 @@ const Cabanas = () => {
 
   const selectCabana = (cabana) => {
     setSelectedCabana(cabana)
+    setShowDetails(false) // Reset para forzar la re-animación
+    
     // Scroll mínimo, solo hasta ocultar las opciones de selección
     setTimeout(() => {
       const detailsSection = document.querySelector('.cabaña-details')
@@ -68,7 +86,7 @@ const Cabanas = () => {
           behavior: 'smooth'
         })
       }
-    }, 100)
+    }, 300) // Aumentamos el delay para que coincida con la animación
   }
 
   const backToSelection = () => {
@@ -100,7 +118,7 @@ const Cabanas = () => {
   return (
     <section id="cabanas" className="py-12 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4">
-        <div className={`text-center ${selectedCabana ? 'mb-12 md:mb-16' : 'mb-8'}`}>
+        <div ref={titleRef} className={`text-center ${selectedCabana ? 'mb-12 md:mb-16' : 'mb-8'} fade-up ${isTitleVisible ? 'visible' : ''}`}>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-gray-900 mb-4 md:mb-6">
             Nuestras Cabañas
           </h2>
@@ -110,7 +128,7 @@ const Cabanas = () => {
           </p>
           
           {/* Opciones de selección siempre visibles */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto px-4">
+          <div ref={selectorRef} className={`grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto px-4 fade-up fade-up-delay-1 ${isSelectorVisible ? 'visible' : ''}`}>
             {cabanas.map((cabana) => (
               <div 
                 key={cabana.id}
@@ -185,7 +203,7 @@ const Cabanas = () => {
 
         {/* Vista detallada de cabaña seleccionada */}
         {selectedCabana && (
-          <div className="max-w-6xl mx-auto cabaña-details px-4">
+          <div className={`max-w-6xl mx-auto cabaña-details px-4 fade-up-immediate ${showDetails ? 'show' : ''}`}>
             {/* Información principal */}
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start mb-8 md:mb-12">
               {/* Imagen principal - Solo desktop */}

@@ -1,6 +1,11 @@
 import React from 'react'
+import useScrollAnimation from '../hooks/useScrollAnimation'
 
 const Hero = () => {
+  const [heroRef, isHeroVisible] = useScrollAnimation(0.1)
+  const [titleRef, isTitleVisible] = useScrollAnimation(0.1)
+  const [subtitleRef, isSubtitleVisible] = useScrollAnimation(0.1)
+  const [buttonsRef, isButtonsVisible] = useScrollAnimation(0.1)
   return (
     <section className="relative min-h-screen flex items-center justify-center">
       {/* Imagen de fondo del Hero */}
@@ -14,14 +19,14 @@ const Hero = () => {
       </div>
 
       {/* Contenido del Hero */}
-      <div className="relative z-10 text-center text-white px-6 sm:px-8 md:px-0 max-w-4xl mx-auto">
-        <h1 className="text-5xl sm:text-6xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight">
+      <div ref={heroRef} className="relative z-10 text-center text-white px-6 sm:px-8 md:px-0 max-w-4xl mx-auto">
+        <h1 ref={titleRef} className={`text-5xl sm:text-6xl md:text-6xl lg:text-7xl font-display font-bold mb-6 leading-tight fade-up ${isTitleVisible ? 'visible' : ''}`}>
           Cabañas Dos Lunas
         </h1>
-        <p className="text-base sm:text-lg md:text-2xl mb-8 max-w-xl mx-auto">
+        <p ref={subtitleRef} className={`text-base sm:text-lg md:text-2xl mb-8 max-w-xl mx-auto fade-up fade-up-delay-1 ${isSubtitleVisible ? 'visible' : ''}`}>
           Donde la naturaleza y el descanso se encuentran
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div ref={buttonsRef} className={`flex flex-col sm:flex-row gap-4 justify-center items-center fade-up fade-up-delay-2 ${isButtonsVisible ? 'visible' : ''}`}>
           <a 
             href="#cabanas" 
             className="bg-brick-600 hover:bg-brick-800 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl w-40 sm:w-auto text-center"

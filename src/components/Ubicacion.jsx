@@ -1,6 +1,12 @@
 import React from 'react'
+import useScrollAnimation from '../hooks/useScrollAnimation'
 
 const Ubicacion = () => {
+  const [titleRef, isTitleVisible] = useScrollAnimation(0.1)
+  const [mapRef, isMapVisible] = useScrollAnimation(0.1)
+  const [textRef, isTextVisible] = useScrollAnimation(0.1)
+  const [buttonRef, isButtonVisible] = useScrollAnimation(0.1)
+
   const handleMaps = () => {
     window.open(
       'https://www.google.com/maps/place/Caba%C3%B1as+Dos+Lunas/@-32.6875408,-64.7267041,284m/data=!3m1!1e3!4m6!3m5!1s0x95d25d0050a25673:0xa27ca08813d74a94!8m2!3d-32.687563!4d-64.7258223!16s%2Fg%2F11xp0qgfxn?hl=es-419&entry=ttu',
@@ -11,7 +17,11 @@ const Ubicacion = () => {
   return (
     <section id="ubicacion" className="py-12 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-12 md:mb-16">
+        {/* Título y descripción */}
+        <div
+          ref={titleRef}
+          className={`text-center mb-12 md:mb-16 fade-up ${isTitleVisible ? 'visible' : ''}`}
+        >
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-gray-900 mb-4 md:mb-6">
             Ubicación
           </h2>
@@ -21,8 +31,11 @@ const Ubicacion = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto px-2 md:px-0">
-          {/* Mapa de Google Maps */}
+        {/* Mapa de Google Maps */}
+        <div
+          ref={mapRef}
+          className={`max-w-4xl mx-auto px-2 md:px-0 fade-up fade-up-delay-1 ${isMapVisible ? 'visible' : ''}`}
+        >
           <div className="relative mb-4 md:mb-6">
             <div className="bg-gray-200 rounded-xl md:rounded-2xl overflow-hidden shadow-lg h-64 md:h-96">
               <iframe
@@ -37,25 +50,31 @@ const Ubicacion = () => {
               ></iframe>
             </div>
           </div>
+        </div>
 
-          {/* Aclaración importante */}
-          <div className="mb-6 md:mb-8 text-justify px-4">
-            <p className="text-gray-700 leading-relaxed text-sm md:text-base">
-              <span className="font-bold italic text-brick-600">Aclaración importante:</span> Google Maps muestra incorrectamente el nombre de la calle como "Los Aromos"; la dirección correcta es "El Aguaribay". Sin embargo, las coordenadas son precisas y te llevarán al lugar exacto.
-            </p>
-          </div>
+        {/* Texto aclaración */}
+        <div
+          ref={textRef}
+          className={`max-w-4xl mx-auto px-2 md:px-0 mb-6 md:mb-8 fade-up fade-up-delay-2 ${isTextVisible ? 'visible' : ''}`}
+        >
+          <p className="text-gray-700 leading-relaxed text-sm md:text-base text-justify">
+            <span className="font-bold italic text-brick-600">Aclaración importante:</span> Google Maps muestra incorrectamente el nombre de la calle como "Los Aromos"; la dirección correcta es "El Aguaribay". Sin embargo, las coordenadas son precisas y te llevarán al lugar exacto.
+          </p>
+        </div>
 
-          {/* Botón para abrir en Google Maps */}
-          <div className="text-center px-4">
-            <button
-              onClick={handleMaps}
-              className="inline-flex items-center justify-center space-x-3 md:space-x-4 bg-brick-600 hover:bg-brick-800 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold transition-colors group text-base md:text-lg"
-            >
-              <i className="fas fa-map-marker-alt text-lg md:text-xl"></i>
-              <span>Abrir en Google Maps</span>
-              <i className="fas fa-external-link-alt text-sm group-hover:translate-x-1 transition-transform"></i>
-            </button>
-          </div>
+        {/* Botón */}
+        <div
+          ref={buttonRef}
+          className={`text-center px-4 fade-up fade-up-delay-3 ${isButtonVisible ? 'visible' : ''}`}
+        >
+          <button
+            onClick={handleMaps}
+            className="inline-flex items-center justify-center space-x-3 md:space-x-4 bg-brick-600 hover:bg-brick-800 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold transition-colors group text-base md:text-lg"
+          >
+            <i className="fas fa-map-marker-alt text-lg md:text-xl"></i>
+            <span>Abrir en Google Maps</span>
+            <i className="fas fa-external-link-alt text-sm group-hover:translate-x-1 transition-transform"></i>
+          </button>
         </div>
       </div>
     </section>

@@ -1,6 +1,11 @@
 import React from 'react'
+import useScrollAnimation from '../hooks/useScrollAnimation'
 
 const Nosotros = () => {
+  const [titleRef, isTitleVisible] = useScrollAnimation(0.1)
+  const [contentRef, isContentVisible] = useScrollAnimation(0.1)
+  const [cardsRef, isCardsVisible] = useScrollAnimation(0.1)
+
   // Rutas corregidas para acceder a imágenes dentro de /public/images
   const imagenes = [
     '/images/luna1/principal.jpg',
@@ -12,7 +17,7 @@ const Nosotros = () => {
   return (
     <section id="nosotros" className="py-12 md:py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
-        <div className="text-center mb-8 md:mb-12">
+        <div ref={titleRef} className={`text-center mb-8 md:mb-12 fade-up ${isTitleVisible ? 'visible' : ''}`}>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-gray-900 mb-4 md:mb-6">
             Sobre Nosotros
           </h2>
@@ -22,7 +27,7 @@ const Nosotros = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-6 lg:gap-1 items-center">
+        <div ref={contentRef} className={`grid lg:grid-cols-2 gap-6 lg:gap-1 items-center fade-up fade-up-delay-1 ${isContentVisible ? 'visible' : ''}`}>
           {/* Grid de imágenes - Primero en mobile */}
           <div className="grid grid-cols-2 gap-2 md:gap-3 max-w-sm md:max-w-lg mx-auto lg:order-2">
             {imagenes.map((imagen, index) => (
@@ -65,7 +70,7 @@ const Nosotros = () => {
         </div>
 
         {/* Tarjetas */}
-        <div className="mt-12 md:mt-16 flex justify-center">
+        <div ref={cardsRef} className={`mt-12 md:mt-16 flex justify-center fade-up fade-up-delay-3 ${isCardsVisible ? 'visible' : ''}`}>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 max-w-5xl px-4">
             <div className="bg-white p-4 md:p-6 rounded-2xl md:rounded-3xl shadow-lg w-full mx-auto flex md:flex-col items-center md:items-center space-x-4 md:space-x-0 md:space-y-4 min-h-[5rem] md:min-h-[14rem]">
               <div className="w-12 h-12 md:w-16 md:h-16 flex-shrink-0 bg-sage-100 rounded-full flex items-center justify-center">
