@@ -348,8 +348,8 @@ const Cabanas = () => {
               </div>
             </div>
 
-            {/* Thumbnails - Solo en escritorio */}
-            <div className="hidden md:flex justify-center mt-2">
+            {/* Thumbnails - Solo en desktop (lg+), nunca en mobile ni tablet */}
+            <div className="hidden lg:flex justify-center mt-2">
               <div className="flex space-x-3 overflow-x-auto pb-4 px-4 max-w-full">
                 {selectedCabana.galeria.map((imagen, i) => (
                   <img
