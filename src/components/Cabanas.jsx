@@ -285,6 +285,10 @@ const Cabanas = () => {
                       <i className="fas fa-child text-sage-600 text-base md:text-lg"></i>
                       <span className="text-gray-700 font-medium text-sm md:text-base">Juegos infantiles</span>
                     </div>
+                    <div className="flex items-center space-x-3">
+                      <i className="fas fa-paw text-wood-600 text-base md:text-lg"></i>
+                      <span className="text-gray-700 font-medium text-sm md:text-base">No se admiten mascotas</span>
+                    </div>
                   </div>
                 </div>
               </div>
